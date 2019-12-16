@@ -97,3 +97,71 @@ Una vegada tingam els tres fitxers, tindrem que executar les següents ordres. P
 Despres `gcc calc.o calcula.c -o calcula` per a generar l'arxiu `calcula` a partir de l'arxiu `calc.o` i el codi font `calcula.c` que és el que tindrà el main.
 
 ## Makefile
+
+Ara hem de crear el makefile.
+
+```
+calcula: calcula.c calc.o
+    gcc -Wall -g calcula.c calc.o -o calcula
+
+calc.o: calc.c
+    gcc -g -Wall -c calc.c -o calc.o
+```
+
+Amb aquest makefile el que podem fer es crear calc.o i calcula amb les ordres `make calc.o` i `make calcula` però encara ens falta afegir alguna cosa\
+\
+Nou makefile:
+
+```
+CC=gcc
+CFLAGS=-Wall -g
+
+calc.o: calc.c
+        $(CC) $(CFLAGS) -c calc.c -o calc.o
+calcula: calcula.c calc.o
+        $(CC) $(CFLAGS) calcula.c calc.o -o calcula
+.PHONY: clean
+clean:
+        rm -rf *.o
+        rm calcula
+
+.PHONY: dist
+dist: clean calcula
+    rm -rf ../dist;
+    mkdir -p ../dist/usr/bin/calc
+    cp calcula ../dist/usr/bin/calc
+
+.PHONY: targz
+targz: clean
+    mkdir -p source
+    cp *.c *.h Makefile source
+    tar -cvf calcula.tar source
+    gzip calcula.tar
+    rm -rf calcula.tar
+    rm -rf source
+
+install: dist
+    cp -r ../dist/* /
+```
+
+## Comprovacions
+
+### make calc.o
+
+image
+
+### make calcula
+
+image
+
+### make dist
+
+image
+
+### make targz
+
+image
+
+### make install
+
+image
