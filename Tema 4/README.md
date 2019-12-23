@@ -148,20 +148,20 @@ install: dist
 
 ### make calc.o
 
-image
+![calco.png](img/calco.png)
 
 ### make calcula
 
-image
+![calcula.png](img/calcula.png)
 
 ### make dist
 
-image
+![dist.png](img/dist.png)
 
 ### make targz
 
-image
+![targz.png](img/targz.png)
 
 ### make install
 
-image
+![install.png](img/install.png)

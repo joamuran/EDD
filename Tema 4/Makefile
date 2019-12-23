@@ -4,7 +4,7 @@ CFLAGS=-Wall -g
 calc.o: calc.c
 	$(CC) $(CFLAGS) -c calc.c -o calc.o
 calcula: calcula.c calc.o
-	$(CC) $(CFLAGS) calcula.c calc.o -o calcula
+	$(CC) calcula.c calc.o -o calcula 2> /dev/null
 .PHONY: clean
 clean:
 	rm -rf *.o
