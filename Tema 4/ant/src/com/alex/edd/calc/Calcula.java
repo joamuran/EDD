@@ -22,6 +22,7 @@ public class Calcula {
         System.out.println("La multiplicació entre "+operand1+" i "+operand2+" és "+myCalc.multiplica(operand1, operand2));
         System.out.println("La divisió entre "+operand1+" i "+operand2+" és "+myCalc.divideix(operand1, operand2));
         System.out.println("¿És "+operand1+" major qué "+operand2+"? "+myCalc.majorQue(operand1, operand2));
+        System.out.println("La mitjana entre "+operand1+" i "+operand2+" és: "+myCalc.mitjana(operand1, operand2));
         System.out.println("Última operació realitzada: "+myCalc.getLastOp()+"; Últim resultat: "+myCalc.getLastResult());
     }
 }
