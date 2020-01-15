@@ -19,3 +19,7 @@ int major(int op1, int op2){
    return major;
 }
 
+int mitja(int op1, int op2){
+   return (op1+op2)/2;
+}
+
