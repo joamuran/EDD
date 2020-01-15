@@ -9,4 +9,5 @@ int main()
         printf("La multiplicació de %d i %d és %d\n", a, b, multiplica(a,b));
         printf("La divisió entre %d i %d és %d\n", a, b, divideix(a,b));
 	printf("El major número entre %d i %d és %d\n", a, b, major(a,b));
+	printf("La mitajana entre %d i %d és %d\n", a, b, mitjana(a,b));
 }
