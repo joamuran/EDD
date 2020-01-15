@@ -1,0 +1,17 @@
+<project>
+    <target name="neteja">
+        <delete dir="classes" />
+    </target>
+
+    <target name="compila" depends="neteja">
+        <mkdir dir="classes" />
+    <javac includeantruntime="false" srcdir="com/alex/edd/calc" destdir="classes" />
+    </target>
+
+    <target name="executa" depends="compila">
+        <java classpath="classes" classname="com.alex.edd.calc.Calcula">
+            <arg value="${arg0}"/>
+            <arg value="${arg1}"/>
+        </java>
+    </target>
+</project>
