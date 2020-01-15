@@ -16,6 +16,7 @@ int main()
         printf("La multiplicació de %d i %d és %d\n", a, b, multiplica(a,b));
         printf("La divisió entre %d i %d és %d\n", a, b, divideix(a,b));
         printf("El major numero entre %d i %d és %d\n", a, b, major(a,b));
+        printf("La mitja entre %d i %d és %d\n", a, b, mitja(a,b));
 }
 ```
 
@@ -58,7 +59,7 @@ int resta(int op1, int op2);
 int multiplica(int op1, int op2);
 int divideix(int op1, int op2);
 int major(int op1, int op2);
-int mitjana(int op1, int op2);
+int mitja(int op1, int op2);
 
 #endif
 ```
