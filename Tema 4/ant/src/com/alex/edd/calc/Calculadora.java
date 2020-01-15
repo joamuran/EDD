@@ -64,9 +64,21 @@ public class Calculadora {
         }
 
         // Actualitzem els atributs de la classe
-        //this.lastResult=Boolean.parseBoolean(result);
         this.lastOp="Comparació major que";
         
+        return result;
+    }
+
+    public float mitjana(float op1, float op2){
+        float result;
+        // Fem els càlculs:
+        result = (op1+op2)/2;
+
+        // Actualitzem els atributs de la classe
+        this.lastResult=result;
+        this.lastOp="Mitjana";
+
+        // Retornem el resultat
         return result;
     }
 
