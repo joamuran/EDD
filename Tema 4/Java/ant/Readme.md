@@ -123,7 +123,7 @@ public class Calcula {
 Una vegada ho tingam tot implementat, sols cal que executem el compilador de Java en l'arxiu de `Calcula.java`i compilarà els dos per igual amb l'ordre `javac com/alex/edd/calc/Calcula.java` i ja tindriem creat els dos `.class`\
 Per a executar la nostra calculadora farem el seguent (desde la carpeta on tenim `com`):
 
-```bash
+```console
 $ java com.alex.edd.calc.Calculadora 3 2
 La suma entre 3.0 i 2.0 és 5.0
 La resta entre 3.0 i 2.0 és 1.0
