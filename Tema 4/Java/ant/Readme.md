@@ -1,7 +1,5 @@
 # Exercici de Ant amb XML
 
-
-
 El primer que hem de fer es crear l'estructura de carpetes que en el meu cas serà `com/alex/edd/calc` i despres crearem els arxius font `Calcula.java` i `Calculadora.java`\
 \
 El nostre arxiu `Calculadora.java` deuría estar de la següent forma (Amb el métode "majorQue" afegit):
@@ -123,7 +121,7 @@ public class Calcula {
 ```
 
 Una vegada ho tingam tot implementat, sols cal que executem el compilador de Java en l'arxiu de `Calcula.java`i compilarà els dos per igual amb l'ordre `javac com/alex/edd/calc/Calcula.java` i ja tindriem creat els dos `.class`\
-Per a executar la nostra calculadora farem el seguent (desde la carpeta on tenim `com`): 
+Per a executar la nostra calculadora farem el seguent (desde la carpeta on tenim `com`):
 
 ```bash
 $ java com.alex.edd.calc.Calculadora 3 2
@@ -162,7 +160,7 @@ Despres sols tindrem que executar uns cuants comandaments per a q faça el que n
 
 Utilitzarem `ant compila` per a que ens compile el codi i neteje el directori "classes"
 
-```bash
+```console
 $ ant compila
 
 Buildfile: /home/alex/Escritorio/DAM/Entorn de desenvolupament/EDD/Tema 4/TO-DOs/TO-DOs Java - Ant/Codis font/build.xml
@@ -180,7 +178,7 @@ Total time: 0 seconds
 
 Ara utilitzarem `ant executa -Darg0=3 -Darg0=5` per a executar la nostra calculadora amb els dos numeros que enviarem que serà 3 i 5.
 
-```bash
+```console
 $ ant executa -Darg0=3 -Darg0=5
 
 Buildfile: /home/alex/Escritorio/DAM/Entorn de desenvolupament/EDD/Tema 4/TO-DOs/TO-DOs Java - Ant/Codis font/build.xml
