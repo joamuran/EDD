@@ -161,3 +161,60 @@ S'ha creat una nova finestra amb l'escena.
 
 **Excepcions**
 *cap*
+<hr>
+
+**Baix d'aquesta linia estarà tot el que he fet jo com a exercicis.**
+
+## Cas d'ús: SM07
+
+**Nom**: Afegir quadrat
+
+**Actors**: Usuari
+
+**Descripció**
+
+L'usuari afig un nou quadrat a l'escena.
+
+**Precondicions**:
+*cap*
+
+**Seqüència normal**
+
+1. L'usuari introdueix les propietats del quadrat (posició, tamany i color) en la CLI.
+2. El sistema afig el quadrat a l'escena i informa l'usuari que s'ha inserit correctament.
+
+**Postcondicions**
+
+S'ha afegit un nou quadrat a l'escena.
+
+**Excepcions**
+
+1.1. Si la sintaxi no es correspon a la del quadrat, mostra un missatge avisant de l'error i mostrant la sintaxi correcta.
+1.2. Si la posició del quadrat cau fora de l'àrea de dibuix, mostra un missatge d'error i no l'afig.
+
+## Cas d'ús: SM08
+
+**Nom**: Afegir el.lipse
+
+**Actors**: Usuari
+
+**Descripció**
+
+L'usuari afig una nova el.lipse a l'escena.
+
+**Precondicions**:
+*cap*
+
+**Seqüència normal**
+
+1. L'usuari introdueix les propietats de l'el.lipse (posició, radi i color) en la CLI.
+2. El sistema afig l'el.lipse a l'escena i informa l'usuari que s'ha inserit correctament.
+
+**Postcondicions**
+
+S'ha afegit un nou el.lipse a l'escena.
+
+**Excepcions**
+
+1.1. Si la sintaxi no es correspon a la de l'el.lipse, mostra un missatge avisant de l'error i mostrant la sintaxi correcta.
+1.2. Si la posició de l'el.lipse cau fora de l'àrea de dibuix, mostra un missatge d'error i no l'afig.
