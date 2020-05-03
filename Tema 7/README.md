@@ -4,7 +4,7 @@
 
 ## 1. Clonació
 
-Primer que tot, agafarem el repositori [scene-maker](https://github.com/joamuran/scene-maker.git) i el clonarem al nostre propi repositori amb l'ordre `git clone https://github.com/joamuran/scene-maker.git` 
+Primer que tot, agafarem el repositori [scene-maker](https://github.com/joamuran/scene-maker.git) i el clonarem al nostre propi repositori amb l'ordre `git clone https://github.com/joamuran/scene-maker.git`  o descarregant-lo com a zip i descomprminit-lo.
 
 ## 2. Incorpora els diferents casos d'ús al diagrama de casos d'ús proporcionat, i realitza la descripció d'aquestos
 
