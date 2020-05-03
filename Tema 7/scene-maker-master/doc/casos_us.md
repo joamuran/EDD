@@ -218,3 +218,30 @@ S'ha afegit un nou el.lipse a l'escena.
 
 1.1. Si la sintaxi no es correspon a la de l'el.lipse, mostra un missatge avisant de l'error i mostrant la sintaxi correcta.
 1.2. Si la posició de l'el.lipse cau fora de l'àrea de dibuix, mostra un missatge d'error i no l'afig.
+
+## Cas d'ús: SM09
+
+**Nom**: Afegir cercle
+
+**Actors**: Usuari
+
+**Descripció**
+
+L'usuari afig un nou cercle a l'escena.
+
+**Precondicions**:
+*cap*
+
+**Seqüència normal**
+
+1. L'usuari introdueix les propietats del cercle (posició, radi i color) en la CLI.
+2. El sistema afig el cercle a l'escena i informa l'usuari que s'ha inserit correctament.
+
+**Postcondicions**
+
+S'ha afegit un nou cercle a l'escena.
+
+**Excepcions**
+
+1.1. Si la sintaxi no es correspon a la del cercle, mostra un missatge avisant de l'error i mostrant la sintaxi correcta.
+1.2. Si la posició del cercle cau fora de l'àrea de dibuix, mostra un missatge d'error i no l'afig.
