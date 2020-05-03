@@ -245,3 +245,30 @@ S'ha afegit un nou cercle a l'escena.
 
 1.1. Si la sintaxi no es correspon a la del cercle, mostra un missatge avisant de l'error i mostrant la sintaxi correcta.
 1.2. Si la posició del cercle cau fora de l'àrea de dibuix, mostra un missatge d'error i no l'afig.
+
+## Cas d'ús: SM10
+
+**Nom**: Afegir linia
+
+**Actors**: Usuari
+
+**Descripció**
+
+L'usuari afig una nova linia a l'escena.
+
+**Precondicions**:
+*cap*
+
+**Seqüència normal**
+
+1. L'usuari introdueix les propietats de la linia (posició inicial, posició final i color) en la CLI.
+2. El sistema afig la linia a l'escena i informa l'usuari que s'ha inserit correctament.
+
+**Postcondicions**
+
+S'ha afegit una nova linia a l'escena.
+
+**Excepcions**
+
+1.1. Si la sintaxi no es correspon a la de la linia, mostra un missatge avisant de l'error i mostrant la sintaxi correcta.
+1.2. Si la posició de la linia cau fora de l'àrea de dibuix, mostra un missatge d'error i no l'afig.
