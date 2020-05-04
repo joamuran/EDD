@@ -23,3 +23,11 @@ En el diagrama de casos d'ús i la seva descripció afegirem:
 2. Afegir el.lipse
 
     2.1 Documentació d'afegir el.lipse
+
+3. Afegir cercle
+
+    3.1 Documentació d'afegir cercle
+
+4. Afegir linia
+
+    3.1 Documentació d'afegir linia
