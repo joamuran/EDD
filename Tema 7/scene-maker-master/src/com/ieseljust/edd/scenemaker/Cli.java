@@ -97,6 +97,28 @@ public class Cli {
                  * corresponga.
                  */
 
+                case "quadrat":
+                    // Creació d'una figura de la classe quadrat
+                    try {
+                        // Extraiem les dimensions
+                        int x = Integer.parseInt((components[1]));
+                        int y = Integer.parseInt((components[2]));
+                        int s = Integer.parseInt((components[3]));
+                        String color = components[4];
+
+                        // Si tot és correcte creem la figura quadrat
+                        Quadrat nouQuad = new Quadrat(x, y, s, this.getColor(color));
+                        // I l'afegim a la llista
+                        AppEscena.add(nouQuad);
+
+                    } catch (Exception e) {
+                        // Si s'ha produït algun error als paràmetres, s'indica un error de sintaxi
+                        System.out.println(
+                                "\u001B[31m Error de sintaxi. La sintaxi correcta és:\nquadrat x y side color\u001B[0m");
+                    }
+                    ;
+                    break;
+
                 case "get":
                     // Descarreguem una figura en el format que estem treballant des d'Internet
                     // D'això s'encarrega la classe RemoteManager ja implementada

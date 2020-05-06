@@ -15,7 +15,7 @@ class Escena {
     private int tamY;
 
     // Les figures de l'escena s'emmagatzemen en una llista
-    private ArrayList<Rectangle> LlistaFigures;
+    private ArrayList<Figura> LlistaFigures;
 
     Escena() {
         // Constructor. Pr defecte creem un tamany de 800x600;
@@ -23,7 +23,7 @@ class Escena {
         this.tamY = 600;
 
         // Inicialitzem la llista de figures
-        LlistaFigures = new ArrayList<Rectangle>();
+        LlistaFigures = new ArrayList<Figura>();
 
     }
 
@@ -34,7 +34,7 @@ class Escena {
         this.tamY = y;
 
         // Inicialitzem la llista de figures
-        LlistaFigures = new ArrayList<Rectangle>();
+        LlistaFigures = new ArrayList<Figura>();
     }
 
     // Mètodes accessors
@@ -54,13 +54,13 @@ class Escena {
         this.tamY = y;
     }
 
-    public void add(Rectangle figura) {
+    public void add(Figura figura) {
         /*
          * Aquest mètode afig un objecte de tipus Rectangle a l'escena.
          */
 
         // Comprovem que la figura cau dins la imatge
-        if (figura.getX() < this.tamX && figura.getY() < this.tamY) {
+        if (figura.getPosX() < this.tamX && figura.getPosY() < this.tamY) {
             this.LlistaFigures.add(figura);
             System.out.println("\u001B[32m OK \u001B[0m");
         } else {
@@ -74,7 +74,7 @@ class Escena {
 
         // Recorrem la llista de figures i invoquem
         // el mètode describeMe de cadascuna d'elles.
-        for (Rectangle f : this.LlistaFigures) {
+        for (Figura f : this.LlistaFigures) {
             f.describeMe();
         }
     }
