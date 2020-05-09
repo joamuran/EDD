@@ -24,7 +24,7 @@ public class Elipse extends Figura{
 
     @Override
     public void describeMe(){
-        System.out.println("Elipe " + this.getPosX() + " " + this.getPosY() + " " + radiX + " " + radiY + " " + this.getColor());
+        System.out.println("El.lipse " + this.getPosX() + " " + this.getPosY() + " " + radiX + " " + radiY + " " + this.getColor());
     }
 
     
