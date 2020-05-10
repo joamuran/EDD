@@ -164,6 +164,28 @@ public class Cli {
                     ;
                     break;
 
+                    case "linia":
+                    // Creació d'una figura de la classe quadrat
+                    try {
+                        // Extraiem les dimensions
+                        int x = Integer.parseInt((components[1]));
+                        int y = Integer.parseInt((components[2]));
+                        int x2 = Integer.parseInt((components[3]));
+                        int y2 = Integer.parseInt((components[4]));
+
+                        // Si tot és correcte creem la figura quadrat
+                        Linia nouLin = new Linia(x, y, x2, y2);
+                        // I l'afegim a la llista
+                        AppEscena.add(nouLin);
+
+                    } catch (Exception e) {
+                        // Si s'ha produït algun error als paràmetres, s'indica un error de sintaxi
+                        System.out.println(
+                                "\u001B[31m Error de sintaxi. La sintaxi correcta és:\nlinia x y x2 y2\u001B[0m");
+                    }
+                    ;
+                    break;
+
                 case "get":
                     // Descarreguem una figura en el format que estem treballant des d'Internet
                     // D'això s'encarrega la classe RemoteManager ja implementada
