@@ -33,9 +33,7 @@ public abstract class Figura implements Renderizable{
         return this.posY;
     }
 
-    public void describeMe() {
-        // Aquesta funció està aci per a que es tinga que fer @Override
-    }
+    public abstract void describeMe();
 
     public void render(Graphics g) {
         /*
