@@ -58,134 +58,6 @@ public class Cli {
             figura = components[0];
 
             switch (figura) {
-                case "dimensions":
-                    try {
-                        AppEscena.setX(Integer.parseInt(components[1]));
-                        AppEscena.setY(Integer.parseInt(components[2]));
-                    } catch (Exception e) {
-                        // Si s'ha produït algun error als paràmetres, s'indica un error de sintaxi
-                        System.out.println(
-                                "\u001B[31m Error de sintaxi. La sintaxi correcta és:\n dimensions x y\u001B[0m");
-                    }
-                    break;
-                case "rectangle":
-                    // Creació d'una figura de la classe cercle
-                    try {
-                        // Extraiem les dimensions
-                        int x = Integer.parseInt((components[1]));
-                        int y = Integer.parseInt((components[2]));
-                        int w = Integer.parseInt((components[3]));
-                        int h = Integer.parseInt((components[4]));
-                        String color = components[5];
-
-                        // Si tot és correcte creem la figura cercle
-                        Rectangle nouRect = new Rectangle(x, y, w, h, this.getColor(color));
-                        // I l'afegim a la llista
-                        AppEscena.add(nouRect);
-
-                    } catch (Exception e) {
-                        // Si s'ha produït algun error als paràmetres, s'indica un error de sintaxi
-                        System.out.println(
-                                "\u001B[31m Error de sintaxi. La sintaxi correcta és:\nrectangle x y width height color\u001B[0m");
-                    }
-                    ;
-                    break;
-
-                /*
-                 * TO-DO: Aci és on haurem de capturar si es tracta d'altre tipus de figura,
-                 * capturar les propietats de la nova figura, crear-la i guardar-la on
-                 * corresponga.
-                 */
-
-                case "quadrat":
-                    // Creació d'una figura de la classe quadrat
-                    try {
-                        // Extraiem les dimensions
-                        int x = Integer.parseInt((components[1]));
-                        int y = Integer.parseInt((components[2]));
-                        int s = Integer.parseInt((components[3]));
-                        String color = components[4];
-
-                        // Si tot és correcte creem la figura quadrat
-                        Quadrat nouQuad = new Quadrat(x, y, s, this.getColor(color));
-                        // I l'afegim a la llista
-                        AppEscena.add(nouQuad);
-
-                    } catch (Exception e) {
-                        // Si s'ha produït algun error als paràmetres, s'indica un error de sintaxi
-                        System.out.println(
-                                "\u001B[31m Error de sintaxi. La sintaxi correcta és:\nquadrat x y side color\u001B[0m");
-                    }
-                    ;
-                    break;
-
-                    case "ellipse":
-                    // Creació d'una figura de la classe quadrat
-                    try {
-                        // Extraiem les dimensions
-                        int x = Integer.parseInt((components[1]));
-                        int y = Integer.parseInt((components[2]));
-                        int rx = Integer.parseInt((components[3]));
-                        int ry = Integer.parseInt((components[4]));
-                        String color = components[5];
-
-                        // Si tot és correcte creem la figura quadrat
-                        Elipse nouEli = new Elipse(x, y, rx, ry, this.getColor(color));
-                        // I l'afegim a la llista
-                        AppEscena.add(nouEli);
-
-                    } catch (Exception e) {
-                        // Si s'ha produït algun error als paràmetres, s'indica un error de sintaxi
-                        System.out.println(
-                                "\u001B[31m Error de sintaxi. La sintaxi correcta és:\nellipse x y radiX radiY color\u001B[0m");
-                    }
-                    ;
-                    break;
-
-                    case "cercle":
-                    // Creació d'una figura de la classe quadrat
-                    try {
-                        // Extraiem les dimensions
-                        int x = Integer.parseInt((components[1]));
-                        int y = Integer.parseInt((components[2]));
-                        int r = Integer.parseInt((components[3]));
-                        String color = components[4];
-
-                        // Si tot és correcte creem la figura quadrat
-                        Cercle nouCer = new Cercle(x, y, r, this.getColor(color));
-                        // I l'afegim a la llista
-                        AppEscena.add(nouCer);
-
-                    } catch (Exception e) {
-                        // Si s'ha produït algun error als paràmetres, s'indica un error de sintaxi
-                        System.out.println(
-                                "\u001B[31m Error de sintaxi. La sintaxi correcta és:\ncercle x y radi color\u001B[0m");
-                    }
-                    ;
-                    break;
-
-                    case "linia":
-                    // Creació d'una figura de la classe quadrat
-                    try {
-                        // Extraiem les dimensions
-                        int x = Integer.parseInt((components[1]));
-                        int y = Integer.parseInt((components[2]));
-                        int x2 = Integer.parseInt((components[3]));
-                        int y2 = Integer.parseInt((components[4]));
-
-                        // Si tot és correcte creem la figura quadrat
-                        Linia nouLin = new Linia(x, y, x2, y2);
-                        // I l'afegim a la llista
-                        AppEscena.add(nouLin);
-
-                    } catch (Exception e) {
-                        // Si s'ha produït algun error als paràmetres, s'indica un error de sintaxi
-                        System.out.println(
-                                "\u001B[31m Error de sintaxi. La sintaxi correcta és:\nlinia x y x2 y2\u001B[0m");
-                    }
-                    ;
-                    break;
-
                 case "get":
                     // Descarreguem una figura en el format que estem treballant des d'Internet
                     // D'això s'encarrega la classe RemoteManager ja implementada
@@ -200,23 +72,7 @@ public class Cli {
                         for (String linia : novesFigures) {
                             // Aci hem de tornar a fer el switch per "desmembrar" la línia
                             String[] items = linia.split(" ");
-                            switch (items[0]) {
-                                case "dimensions":
-                                    AppEscena.setX(Integer.parseInt(items[1]));
-                                    AppEscena.setY(Integer.parseInt(items[2]));
-                                    break;
-                                case "rectangle":
-                                    int x = Integer.parseInt((items[1]));
-                                    int y = Integer.parseInt((items[2]));
-                                    int w = Integer.parseInt((items[3]));
-                                    int h = Integer.parseInt((items[4]));
-                                    String color = items[5];
-
-                                    // Si tot és correcte creem la figura cercle
-                                    Rectangle nouRect = new Rectangle(x, y, w, h, this.getColor(color));
-                                    // I l'afegim a la llista
-                                    AppEscena.add(nouRect);
-                            }
+                            afegeixFigura(items[0], items);
                         }
                     } catch (Exception e) {
                         System.out.println("Excepció en la càrrega del fitxer: ");
@@ -258,8 +114,8 @@ public class Cli {
                     System.exit(0);
 
                 default:
-                    // Si hem arribat aci, l'ordre no es coneix
-                    System.out.println("\u001B[31m Figura no reconeguda \u001B[0m");
+                    // Si hem arribat aci, és perque es vol afegir una figura
+                    afegeixFigura(figura, components);
             }
 
         } while (true);
@@ -313,6 +169,133 @@ public class Cli {
 
         Cli myCli = new Cli();
         myCli.run(args);
+    }
+    
+    private static void afegeixFigura(String figura, String[] components){
+        Cli myCli = new Cli();
+        switch(figura){
+            case "dimensions":
+                    try {
+                        AppEscena.setX(Integer.parseInt(components[1]));
+                        AppEscena.setY(Integer.parseInt(components[2]));
+                    } catch (Exception e) {
+                        // Si s'ha produït algun error als paràmetres, s'indica un error de sintaxi
+                        System.out.println(
+                                "\u001B[31m Error de sintaxi. La sintaxi correcta és:\n dimensions x y\u001B[0m");
+                    }
+                    break;
+            case "rectangle": 
+                // Creació d'una figura de la classe cercle
+                try {
+                    // Extraiem les dimensions
+                    int x = Integer.parseInt((components[1]));
+                    int y = Integer.parseInt((components[2]));
+                    int w = Integer.parseInt((components[3]));
+                    int h = Integer.parseInt((components[4]));
+                    String color = components[5];
+
+                    // Si tot és correcte creem la figura cercle
+                    Rectangle nouRect = new Rectangle(x, y, w, h, myCli.getColor(color));
+                    // I l'afegim a la llista
+                    AppEscena.add(nouRect);
+
+                } catch (Exception e) {
+                    // Si s'ha produït algun error als paràmetres, s'indica un error de sintaxi
+                    System.out.println(
+                            "\u001B[31m Error de sintaxi. La sintaxi correcta és:\nrectangle x y width height color\u001B[0m");
+                }
+                ;
+                break;
+            case "quadrat":
+                // Creació d'una figura de la classe quadrat
+                try {
+                    // Extraiem les dimensions
+                    int x = Integer.parseInt((components[1]));
+                    int y = Integer.parseInt((components[2]));
+                    int s = Integer.parseInt((components[3]));
+                    String color = components[4];
+
+                    // Si tot és correcte creem la figura quadrat
+                    Quadrat nouQuad = new Quadrat(x, y, s, myCli.getColor(color));
+                    // I l'afegim a la llista
+                    AppEscena.add(nouQuad);
+
+                } catch (Exception e) {
+                    // Si s'ha produït algun error als paràmetres, s'indica un error de sintaxi
+                    System.out.println(
+                            "\u001B[31m Error de sintaxi. La sintaxi correcta és:\nquadrat x y side color\u001B[0m");
+                }
+                ;
+                break;
+            case "ellipse":
+                // Creació d'una figura de la classe quadrat
+                try {
+                    // Extraiem les dimensions
+                    int x = Integer.parseInt((components[1]));
+                    int y = Integer.parseInt((components[2]));
+                    int rx = Integer.parseInt((components[3]));
+                    int ry = Integer.parseInt((components[4]));
+                    String color = components[5];
+
+                    // Si tot és correcte creem la figura quadrat
+                    Elipse nouEli = new Elipse(x, y, rx, ry, myCli.getColor(color));
+                    // I l'afegim a la llista
+                    AppEscena.add(nouEli);
+
+                } catch (Exception e) {
+                    // Si s'ha produït algun error als paràmetres, s'indica un error de sintaxi
+                    System.out.println(
+                            "\u001B[31m Error de sintaxi. La sintaxi correcta és:\nellipse x y radiX radiY color\u001B[0m");
+                }
+                ;
+                break;
+
+            case "cercle":
+                // Creació d'una figura de la classe quadrat
+                try {
+                    // Extraiem les dimensions
+                    int x = Integer.parseInt((components[1]));
+                    int y = Integer.parseInt((components[2]));
+                    int r = Integer.parseInt((components[3]));
+                    String color = components[4];
+
+                    // Si tot és correcte creem la figura quadrat
+                    Cercle nouCer = new Cercle(x, y, r, myCli.getColor(color));
+                    // I l'afegim a la llista
+                    AppEscena.add(nouCer);
+
+                } catch (Exception e) {
+                    // Si s'ha produït algun error als paràmetres, s'indica un error de sintaxi
+                    System.out.println(
+                            "\u001B[31m Error de sintaxi. La sintaxi correcta és:\ncercle x y radi color\u001B[0m");
+                }
+                ;
+                break;
+
+            case "linia":
+                // Creació d'una figura de la classe quadrat
+                try {
+                    // Extraiem les dimensions
+                    int x = Integer.parseInt((components[1]));
+                    int y = Integer.parseInt((components[2]));
+                    int x2 = Integer.parseInt((components[3]));
+                    int y2 = Integer.parseInt((components[4]));
+
+                    // Si tot és correcte creem la figura quadrat
+                    Linia nouLin = new Linia(x, y, x2, y2);
+                    // I l'afegim a la llista
+                    AppEscena.add(nouLin);
+
+                } catch (Exception e) {
+                    // Si s'ha produït algun error als paràmetres, s'indica un error de sintaxi
+                    System.out.println(
+                            "\u001B[31m Error de sintaxi. La sintaxi correcta és:\nlinia x y x2 y2\u001B[0m");
+                }
+                ;
+                break;
+            default:
+                System.out.println("\u001B[31m Figura no reconeguda \u001B[0m");
+        }
     }
 
 }
