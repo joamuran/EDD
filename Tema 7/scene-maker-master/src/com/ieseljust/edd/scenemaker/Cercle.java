@@ -28,6 +28,6 @@ public class Cercle extends Figura{
     @Override
     public void render(Graphics g) {
         super.render(g);
-        g.fillOval(this.getPosX(), this.getPosY(), this.radi*2, this.radi*2);
+        g.fillOval(this.getPosX()-this.radi, this.getPosY()-this.radi, this.radi*2, this.radi*2);
     }
 }

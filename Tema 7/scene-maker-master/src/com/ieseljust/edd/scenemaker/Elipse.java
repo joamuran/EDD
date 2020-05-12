@@ -31,6 +31,6 @@ public class Elipse extends Figura{
     @Override
     public void render(Graphics g) {
         super.render(g);
-        g.fillOval(this.getPosX(), this.getPosY(), this.radiY*2, this.radiX*2);
+        g.fillOval(this.getPosX()-this.radiX, this.getPosY()-this.radiY, this.radiY*2, this.radiX*2);
     }
 }
