@@ -74,7 +74,32 @@ En quant a mètodes, aquesta presenta els diferent *mètodes accessors* (*gets* 
 
 Per altra banda, aquesta classe té una dependència de la classe `Renderer`, que és la que s'encarregarà de crear la finestra gràfica i *pintar* en ella les diferents figures. En principi, no caldrà modificar res d'aquesta classe.
 
+## Classe `com.ieseljust.edd.scenemaker.Figura`
+
+Aquesta classe és abstracta ja que no anem a instanciar ningún objecte d'aquesta classe sino que la anem a utilitzar per a que les demés figures hereden els atributs i métodes d'aquesta.
+
+Principalment constarà de 3 atributs privats. 2 int que van a ser PosX i PosY que señalaràn la posició de la figura i un color d'objecte Color, que serà el color de la figura.
+
+També tindrà un constructor amb eixos atributs i els seus respectius getters i setters.
+
+La classe constarà també de 2 funcions, una d'ella serà abstracta per a que es tinga que implementar sí o sí i l'altra no serà abstracta però la tindrem que implementar. No és abstracta per a no repetir codi en les distintes classes.
+
 ## Classe `com.ieseljust.edd.scenemaker.Rectangle`
 
 Aquesta classe representa els rectangles que dibuixarem a l'escena. Com veiem, és una classe bastant senzilla, amb les propietats de posicionament i dimensions del rectangle, així com el color. Com a mètodes, aporta diferents constructors, els mètodes accessors, i dos mètodes més: `describeMe`, que escriu per consola una descripció del rectangle, i `render(Graphics g)` que dibuixa el rectangle sobre un context gràfic. Com veiem, la nostra classe rectangle, implementa la interfície `Renderizable`, que simplement ens *obliga* a implementar el mètode *render*.
 
+## Classe `com.ieseljust.edd.scenemaker.Quadrat`
+
+Aquesta classe representa els quadrats que dibuixarem a l'escena. Com veiem, és una classe bastant senzilla, amb les propietats del costat del quadrat. Com a mètodes, aporta diferents constructors, els mètodes accessors, i els métodes heredats.
+
+## Classe `com.ieseljust.edd.scenemaker.Ellipse`
+
+Aquesta classe representa els ellipses que dibuixarem a l'escena. Com veiem, és una classe bastant senzilla, amb les propietats del radiX i radiY. Com a mètodes, aporta diferents constructors, els mètodes accessors, i els métodes heredats.
+
+## Classe `com.ieseljust.edd.scenemaker.Cercle`
+
+Aquesta classe representa els cercles que dibuixarem a l'escena. Com veiem, és una classe bastant senzilla, amb les propietats del radi. Com a mètodes, aporta diferents constructors, els mètodes accessors, i els métodes heredats.
+
+## Classe `com.ieseljust.edd.scenemaker.Linia`
+
+Aquesta classe representa les linies que dibuixarem a l'escena. Com veiem, és una classe bastant senzilla, amb les propietats del punt X i Y on aplegarà. Com a mètodes, aporta diferents constructors, els mètodes accessors, i els métodes heredats.
